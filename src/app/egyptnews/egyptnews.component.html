@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let n of allnews; let i = index">
+            <div class="card"  style="width: 20rem; margin: 10px 0px;">
+                <img [src]="n.urlToImage"  *ngIf="n.urlToImage" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{n.title}}</h5>
+                  <p class="card-text">{{n.description}}</p>
+                  <a [routerLink]="['/app-egydet',i]" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              </div>
+        </div>
+    </div>
+   
